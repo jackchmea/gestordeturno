@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Turnos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <!-- SECCIÓN IZQUIERDA -->
+        <section class="registro">
+            <h1>Registrar turno</h1>
+
+            <label for="nombre">Nombre del paciente</label>
+            <input 
+                type="text" 
+                id="nombre" 
+                placeholder="Ingrese el nombre"
+            >
+
+            <label for="fecha">Día</label>
+            <input type="date" id="fecha">
+
+            <label for="horario">Horario</label>
+            <select id="horario">
+                <option value="">Seleccionar horario</option>
+            </select>
+
+            <label for="especialidad">Especialidad</label>
+            <select id="especialidad">
+                <option value="">Seleccionar especialidad</option>
+                <option value="Cardiología">Cardiología</option>
+                <option value="Clínica médica">Clínica médica</option>
+                <option value="Dermatología">Dermatología</option>
+                <option value="Oftalmología">Oftalmología</option>
+                <option value="Pediatría">Pediatría</option>
+                <option value="Traumatología">Traumatología</option>
+            </select>
+
+            <button id="guardarTurno">Guardar turno</button>
+
+            <p id="mensaje"></p>
+        </section>
+
+
+        <!-- SECCIÓN DERECHA -->
+        <section class="panel">
+            <h2>Turnos asignados</h2>
+
+            <div id="listaTurnos">
+                <!-- Los turnos aparecerán acá -->
+            </div>
+
+            <div id="sinTurnos" class="sin-turnos">
+                No hay turnos registrados.
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
